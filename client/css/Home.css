@@ -1,0 +1,616 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: 'Satoshi';
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+    height: 24px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-right: 56px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Satoshi';
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb400;
+  position: relative;
+}
+
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #ffb400;
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+.cart {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  align-items: center;
+}
+.cart-btn {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Satoshi';
+  width: 70px;
+  height: 36px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover{
+    background-color: #ffb400;
+}
+
+/* Hero Section */
+.hero {
+  height: 800px;
+  padding: 0 100px;
+  background: url('/client/Assets/Images/Hero-bg.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.hero-content {
+    height: fit-content;
+    position: relative;
+    top: 206px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-content h1 span {
+  color: #ffb400;
+}
+
+.hero-content p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #ccc;
+  line-height: 30px;
+  margin-bottom: 60px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.btn-primary,
+.btn-outline {
+    width: 120px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-primary:hover{
+    background-color: #ffb400;
+}
+
+.btn-outline:hover {
+    border: 1px solid #ffb400;
+    color: #ffb400;
+}
+
+.btn-primary:active{
+  transform: scale(0.95);
+}
+
+.btn-outline:active{
+  transform: scale(0.95);
+}
+
+.cart-btn:active{
+  transform: scaleX(1.1);
+}
+
+@media (min-width:1025px){
+  .cart svg{
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0 24px;
+  }
+
+  .nav-links{
+    display: none;
+  }
+
+  .hero{
+    padding: 0 24px;
+    height: 700px;
+  }
+  .hero-content h1{
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .hero-content p{
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+  .buttons{
+    gap: 12px;
+  }
+}
+@media (min-width:501px) and (max-width:1024px){
+  .navbar {
+    padding: 0 88px;
+  }
+
+  .nav-links{
+    display: none;
+  }
+  .hero{
+    padding: 0 88px;
+    height: 750px;
+  }
+  .hero-content h1{
+    font-size: 48px;
+    line-height: 54px;
+  }
+  .hero-content p{
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+  .buttons{
+    gap: 18px;
+  }
+}
+/* Header and Hero Section done with Responsivity */
+.About{
+  width: 100%;
+  height: 600px;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #020300;
+}
+.Card{
+  width: 31.3%;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  background: #ffffff03; 
+  border-radius: 20px; 
+  border: 3px #ffffff03 solid; 
+  backdrop-filter: blur(27.30px);
+  transition: all 0.3s ease-in-out;
+}
+
+.Card:hover{
+  border-color: #ffffff12;
+
+}
+.paw-front{
+  fill: #ffb400;
+  top: 100px;
+  width: 120px;
+  position: absolute;
+  z-index: 2;
+}
+.paw-back{
+  width: 120px;
+  top: 100px;
+  filter: blur(20px);
+  fill: #ffb400;
+  position: absolute;
+  z-index: -100;
+}
+.Card-text{
+  top: 328px;
+  position: absolute;
+  text-align: center;
+}
+.Card-text h6{
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -4%;
+  color: #717171;
+  margin-bottom: 6px;
+}
+.Card-text h3{
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -4%;
+  color: #fff;
+}
+
+@media (min-width:501px) and (max-width:1024px){
+  .About{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+    padding: 0 88px;
+  }
+  .Card{
+    width: 100%;
+    height: 220px;
+  }
+  .paw-back{
+    position: absolute;
+    top: 50px;
+    left: 10%;
+  }
+  .paw-front{
+    position: absolute;
+    top: 50px;
+    left: 10%;
+  }
+    #paw{
+    margin-top: 24px;
+  }
+  #lightning{
+    margin-bottom: 24px;
+  }
+  .Card-text{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    text-align: left;
+  }
+}
+
+@media(max-width:500px){
+  .About{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+    padding: 0 24px;
+  }
+  .Card{
+    width: 100%;
+  }
+
+  #paw{
+    margin-top: 24px;
+  }
+  #lightning{
+    margin-bottom: 24px;
+  }
+}
+/* About section done with responsivity */
+.Testinomials{
+  width: 100%;
+  height: 700px;
+  background-color: #020300;
+  padding: 60px 100px 0 100px;
+}
+.Headings{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.Headings h2{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -4%;
+  margin-bottom: 6px;
+}
+.Headings h1{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: -4%;
+}
+.Headings span{
+  color: #ffb400;
+}
+.Card-container{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+}
+.T-Card{
+  width: 30.5%;
+  height: 300px;
+  background: #ffffff03;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  border-radius: 20px; 
+  border: 3px #ffffff03 solid;
+  padding: 18px; 
+  backdrop-filter: blur(27.30px);
+  transition: all 0.3s ease-in-out;
+}
+.T-Card:hover{
+  border-color: #ffffff12;
+  transform: translateY(-10px);
+}
+
+.T-Card p{
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -4%;
+  font-weight: 500;
+}
+.Name h5{
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -4%;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.Name h6{
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -4%;
+  color: #717171;
+  font-weight: 700;
+}
+@media (min-width:501px) and (max-width:1024px){
+  .Testinomials{
+    padding: 60px 88px 0 88px;
+    height: fit-content;
+  }
+  .Card-container{
+    flex-direction: column;
+    height: fit-content;
+  }
+  .T-Card{
+    width: 100%;
+  }
+}
+
+@media (max-width:500px){
+  .Testinomials{
+    padding: 60px 24px 0 24px;
+    height: fit-content;
+  }
+  .Card-container{
+    flex-direction: column;
+    height: fit-content;
+  }
+  .T-Card{
+    width: 100%;
+  }
+}
+/* Testinomials section done with responsivity */
+.Shop-CTA{
+  background-color: #020300;
+  width: 100%;
+  height: 400px;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Shop-CTA h2{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: -4%;
+  margin-bottom: 6px;
+}
+.Shop-CTA span{
+  color: #ffb400;
+}
+.Shop-CTA h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -4%;
+  margin-bottom: 24px;
+}
+.Shop-CTA a {
+  width: 140px;
+  font-weight: 600;
+}
+
+@media(min-width:501px) and (max-width:1024px){
+  .Shop-CTA h2{
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .Shop-CTA h3{
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .Shop-CTA{
+    padding: 0 88px;
+  }
+}
+@media(max-width:500px){
+  .Shop-CTA h2{
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .Shop-CTA h3{
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .Shop-CTA{
+    padding: 0 24px;
+  }
+}
+footer{
+  width: 100%;
+  height: 300px;
+  background-color: #020300;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.text1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.text2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.footer-texts{
+  background-color: #020300;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+.text{
+  height: 100px;
+  background-color: #020300;
+}
+.text h3{
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -4%;
+  margin-bottom: 6px;
+  color: #717171;
+  cursor: pointer;
+}
+#head{
+  color: white;
+}
+.text h3:hover{
+  color: #ffffff;
+}
+@media (min-width:501px) and (max-width:1024px){
+  .footer-texts{
+    display: flex;
+    flex-direction: column;
+  }
+  .text h3{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+  }
+  footer{
+    padding: 0 88px;
+    height: 400px;
+  }
+}
+@media (max-width:500px){
+  .text h3{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+  }
+  footer{
+    padding: 0 24px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .footer-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .text1{
+    gap: 30px;
+  }
+  .text2{
+    gap: 30px;
+  }
+}
