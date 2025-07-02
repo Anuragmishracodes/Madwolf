@@ -94,7 +94,7 @@ body {
 .hero {
   height: 800px;
   padding: 0 100px;
-  background: url('/client/Assets/Images/Hero-bg.png') center/cover no-repeat;
+  background: url('/Assets/Images/Hero-bg.png') center/cover no-repeat;
   position: relative;
   display: flex;
   justify-content: center;
